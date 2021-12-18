@@ -80,12 +80,10 @@
                 }
                 ?>
         </section>
-
         <section>
             <h3>Server-information</h3>
             <?php echo $image->displayInfo(); ?>
         </section>
-
         <section>
                 <a class="btn btn-danger" href="<?php echo $_SERVER['PHP_SELF']; ?>?delete">Radera alla bilder</a>
         </section>

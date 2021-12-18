@@ -5,6 +5,7 @@
  * @author Mattias Dahlgren, 2021 <mattias.dahlgren@miun.se>
  * @version 1.0
  */
+
 class Image {
     private $imagepath;
     private $width_thumbnail;
