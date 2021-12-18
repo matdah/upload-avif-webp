@@ -55,30 +55,37 @@
         </section>
 
         <section>
-                <h3>Uppladdade bilder</h3>
-                <?php
-                $imagelist = $image->getImages();
+            <h3>Uppladdade bilder</h3>
+            <?php
+            $imagelist = $image->getImages();
 
-                if($imagelist != null && count($imagelist) > 0) {
-                    foreach($imagelist as $filename) {
-                        ?>
-                        <div>
-                            <picture>
-                                <source srcset="images/<?php echo $filename; ?>.avif" type="media/avif">
-                                <source srcset="images/<?php echo $filename; ?>.webp" type="media/webp">
-                                <img src="images/<?php echo $filename; ?>.jpg" alt="" />
-                            </picture>
+            if($imagelist != null && count($imagelist) > 0) {
+                foreach($imagelist as $filename) {
+                    ?>
+                    <div>
+                        <picture>
+                            <?php if(file_exists("images/" . $filename . ".avif")) {
+                                ?>
+                            <source srcset="images/<?php echo $filename; ?>.avif" type="media/avif">
+                                <?php
+                            } if(file_exists("images/" . $filename . ".webp")) {
+                                ?>
+                            <source srcset="images/<?php echo $filename; ?>.webp" type="media/webp">
+                                <?php
+                            }?>   
+                            <img src="images/<?php echo $filename; ?>.jpg" alt="" />
+                        </picture>
 
-                            <div class="image-info">
-                                <?php $image->showImageInfo($filename); ?>
-                            </div>
+                        <div class="image-info">
+                            <?php $image->showImageInfo($filename); ?>
                         </div>
-                        <?php
-                    }
-                } else {
-                    echo "<p>Inga bilder uppladdade ännu!</p>";
+                    </div>
+                    <?php
                 }
-                ?>
+            } else {
+                echo "<p>Inga bilder uppladdade ännu!</p>";
+            }
+            ?>
         </section>
         <section>
             <h3>Server-information</h3>

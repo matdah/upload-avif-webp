@@ -140,7 +140,12 @@ class Image {
         $output = "<section>\n<h3>Information</h3>\n";
         foreach(glob($this->imagepath . $filename . "*") as $file) {
             
-            $output .= "<strong>File type: " . mime_content_type($file) . "</strong><br>\n";
+            if(function_exists("mime_content_type")) {
+                $mime = mime_content_type($file);
+            } else {
+                $mime = "(Okänd fityp)";
+            }
+            $output .= "<strong>File type: " . $mime . "</strong><br>\n";
 
             $filesize = filesize($file);
             // Convert to kb
