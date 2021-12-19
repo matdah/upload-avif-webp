@@ -3,7 +3,7 @@
  * Examle code for uploading images and creating miniatures.
  * Converts and outputs to: JPEG, Webp, AVIF
  * @author Mattias Dahlgren, 2021 <mattias.dahlgren@miun.se>
- * @version 1.0
+ * @version 1.3
  */
 
 class Image {
