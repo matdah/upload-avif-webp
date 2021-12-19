@@ -30,6 +30,7 @@ class Image {
 +displayInfo() void
 +deleteAllImages() bool
 }
+```
 
 ## Properties
 * imagepath - sökvägen till bilder - default satt i constructor: /images
