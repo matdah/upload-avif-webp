@@ -29,8 +29,6 @@ class Image
 +filenameAvailable(String filename) : bool
 +displayInfo() void
 +deleteAllImages() bool
-
-
 ```
 
 ##  Properties
