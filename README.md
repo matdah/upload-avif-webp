@@ -11,7 +11,7 @@ Kopiera/klona filerna till din dator. Se till att "images"-katalogen har både l
 ##  UML-diagram
 ```mermaid
 classDiagram
-class Image {
+class Image 
 -String imagepath
 -Int width_thumbnail
 -Int height_thumbnail
@@ -29,7 +29,7 @@ class Image {
 +filenameAvailable(String filename) : bool
 +displayInfo() void
 +deleteAllImages() bool
-}
+
 
 ```
 
