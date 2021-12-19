@@ -168,7 +168,7 @@ class Image {
      * @param string $filename
      * @return void
      */
-    private function saveToJson($filename) {
+    private function saveToJson($filename) : void {
         // Remove file extension
         $filename = pathinfo($filename)['filename'];
 
@@ -185,7 +185,7 @@ class Image {
      * Return images from JSON content as array
      * @return array
      */
-    public function getImages() {
+    public function getImages() : array {
         return json_decode(file_get_contents('images.json'), true);
     }
 
@@ -194,7 +194,7 @@ class Image {
      * @param file $image
      * @return bool
      */
-    public function isImageAllowed($image) {
+    public function isImageAllowed($image) : bool {
         $type = $image['type'];
         if($type != "image/jpeg") {
             return false;
@@ -207,7 +207,7 @@ class Image {
 	* Generate non-taken filenamn
 	* @return string $filename
 	*/
-    public function createFileName() {
+    public function createFileName() : string {
         do {
             $random_filename = substr(str_shuffle(str_repeat("0123456789abcdefghijklmnopqrstuvwxyz", 12)), 0, 12);
             $random_filename = $random_filename . ".jpg";
@@ -221,7 +221,7 @@ class Image {
 	* @param string $filename
 	* @return bool
 	*/
-	public function FilenameAvailable($filename) {
+	public function FilenameAvailable($filename) : bool {
         if(file_exists($this->imagepath . $filename)) {
             return false;
         } else {
@@ -233,7 +233,7 @@ class Image {
     * Show info about installed capabilities
     * @return void
     */
-    function displayInfo() {
+    public function displayInfo() : void {
         echo "<ul class='capabilities'>\n";
 
         echo "<li>PHP version: " . phpversion() . "</li>\n";
@@ -261,8 +261,9 @@ class Image {
 
     /**
      * Delete all files in image directory
+     * @return bool
      */
-    public function deleteAllImages() {
+    public function deleteAllImages() : bool {
         $files = glob($this->imagepath . '*'); // get all file names
         foreach($files as $file){ // iterate files
             if(is_file($file))
