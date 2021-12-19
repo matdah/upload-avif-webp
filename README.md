@@ -11,29 +11,6 @@ Kopiera/klona filerna till din dator. Se till att "images"-katalogen har både l
 ##  UML-diagram
 ![UML-diagram](https://github.com/matdah/upload-avif-webp/blob/master/images/uml.jpg)
 
-
-```mermaid
-classDiagram
-class Image 
--String imagepath
--Int width_thumbnail
--Int height_thumbnail
--Int jpeg_quality
--Int web_quality
--Int avif_quality
--Int avif_speed
-+uploadImage(File image) bool
-+setImage(File image) bool
-+showImageInfo(String filename) void
--saveToJson(String filename) void
-+getImages() array
-+isImageAllowed(File image) bool
-+createFileName() String
-+filenameAvailable(String filename) : bool
-+displayInfo() void
-+deleteAllImages() bool
-```
-
 ##  Properties
 *  imagepath - sökvägen till bilder - default satt i constructor: /images
 *  width_thumbnail - maximal bredd på miniatyrer - default: 500px
