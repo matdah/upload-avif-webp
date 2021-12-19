@@ -271,7 +271,7 @@ class Image {
         }
 
         // Empty JSON-file
-        file_put_contents('images.json', '');
+        file_put_contents('images.json', '[]');
         return true;
     }
 }
