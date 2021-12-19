@@ -9,7 +9,8 @@ Konverterar - om möjligt - till följande bildformat:
 Kopiera/klona filerna till din dator. Se till att "images"-katalogen har både läs- och skriv-rättigheter.
 
 ##  UML-diagram
-https://github.com/matdah/upload-avif-webp/blob/master/images/uml.jpg
+![UML-diagram](https://github.com/matdah/upload-avif-webp/blob/master/images/uml.jpg)
+
 
 ```mermaid
 classDiagram
