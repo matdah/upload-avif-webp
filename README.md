@@ -33,5 +33,6 @@ Kopiera/klona filerna till din dator. Se till att "images"-katalogen har både l
 -  **deleteAllImages** - raderar alla bildfiler från filsystemet och nollställer JSON-fil
 
 ###  Av
-Av Mattias Dahlgren, 2021
+Av Mattias Dahlgren, 2021 - Mittuniversitetet
+
 E-post: mattias.dahlgren@miun.se
